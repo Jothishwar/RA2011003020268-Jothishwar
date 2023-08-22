@@ -16,12 +16,19 @@ async function getauthToken() {
     return thisData;
 }
 
-export async function getTrains(){
+async function getTrains(){
     const auth_data= await getauthToken();
     const res_data = await fetch("http://20.244.56.144/train/trains", {
             method: 'GET',
             headers: { Authorization: `Bearer ${auth_data.access_token}` }
     })
     const train_data = await res_data.json();
+    // console.log(train_data)
     return train_data;
 }
+
+
+const train_data= await getTrains();
+
+console.log(train_data);
+export {train_data}

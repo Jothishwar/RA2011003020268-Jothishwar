@@ -1,7 +1,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Link, Routes } from 'react-router-dom';
 import Trains from './Components/Trains';
-import Train from './Components/Train';
+// import Train from './Components/Train';
 import { AppBar, Toolbar, Typography, Container, Button, IconButton } from '@mui/material';
 
 const App = () => {
@@ -18,7 +18,7 @@ const App = () => {
       <Container maxWidth="lg" style={{ marginTop: '20px' }}>
         <Routes>
           <Route path="/" element={<Trains />} />
-          <Route path="/trains/:trainId" element={<Train />} />
+          {/* <Route path="/trains/:trainId" element={<Train />} /> */}
         </Routes>
       </Container>
     </Router>
